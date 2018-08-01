@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28C24C512107D39700E1CEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C502107D39700E1CEB1 /* AppDelegate.swift */; };
+		28C24C532107D39700E1CEB1 /* PredinaRiskMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C522107D39700E1CEB1 /* PredinaRiskMapViewController.swift */; };
+		28C24C562107D39700E1CEB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C24C542107D39700E1CEB1 /* Main.storyboard */; };
+		28C24C582107D39700E1CEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C24C572107D39700E1CEB1 /* Assets.xcassets */; };
+		28C24C5B2107D39700E1CEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C24C592107D39700E1CEB1 /* LaunchScreen.storyboard */; };
+		28C24C662107D39700E1CEB1 /* PredinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C652107D39700E1CEB1 /* PredinaTests.swift */; };
+		28C24C712107D39700E1CEB1 /* PredinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C702107D39700E1CEB1 /* PredinaUITests.swift */; };
+		28C24C87210910DA00E1CEB1 /* PredinaRiskLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C86210910DA00E1CEB1 /* PredinaRiskLocationModel.swift */; };
+		28C24C8D21091CC100E1CEB1 /* PredinaRiskLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C8C21091CC100E1CEB1 /* PredinaRiskLocationViewModel.swift */; };
+		28C24C8F21091E4E00E1CEB1 /* PredinaRiskMapUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C8E21091E4E00E1CEB1 /* PredinaRiskMapUtil.swift */; };
+		28C24C912109936A00E1CEB1 /* PredinaRiskLocationMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C902109936A00E1CEB1 /* PredinaRiskLocationMarkerView.swift */; };
+		28C24C96210E69FA00E1CEB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C24C95210E69FA00E1CEB1 /* CFNetwork.framework */; };
+		28C24C98210E6A0100E1CEB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C24C97210E6A0100E1CEB1 /* SystemConfiguration.framework */; };
+		28C24C9A210E6A0800E1CEB1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C24C99210E6A0800E1CEB1 /* MobileCoreServices.framework */; };
+		28C24C9C210E6A2900E1CEB1 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C24C9B210E6A2900E1CEB1 /* libz.1.1.3.tbd */; };
+		28C24C9E210E6A9200E1CEB1 /* PredinaRequestLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C24C9D210E6A9200E1CEB1 /* PredinaRequestLocationService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28C24C622107D39700E1CEB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28C24C452107D39700E1CEB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28C24C4C2107D39700E1CEB1;
+			remoteInfo = Predina;
+		};
+		28C24C6D2107D39700E1CEB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28C24C452107D39700E1CEB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28C24C4C2107D39700E1CEB1;
+			remoteInfo = Predina;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28C24C4D2107D39700E1CEB1 /* Predina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Predina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C24C502107D39700E1CEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28C24C522107D39700E1CEB1 /* PredinaRiskMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRiskMapViewController.swift; sourceTree = "<group>"; };
+		28C24C552107D39700E1CEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28C24C572107D39700E1CEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28C24C5A2107D39700E1CEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28C24C5C2107D39700E1CEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C24C612107D39700E1CEB1 /* PredinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C24C652107D39700E1CEB1 /* PredinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaTests.swift; sourceTree = "<group>"; };
+		28C24C672107D39700E1CEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C24C6C2107D39700E1CEB1 /* PredinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C24C702107D39700E1CEB1 /* PredinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaUITests.swift; sourceTree = "<group>"; };
+		28C24C722107D39700E1CEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C24C86210910DA00E1CEB1 /* PredinaRiskLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRiskLocationModel.swift; sourceTree = "<group>"; };
+		28C24C8C21091CC100E1CEB1 /* PredinaRiskLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRiskLocationViewModel.swift; sourceTree = "<group>"; };
+		28C24C8E21091E4E00E1CEB1 /* PredinaRiskMapUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRiskMapUtil.swift; sourceTree = "<group>"; };
+		28C24C902109936A00E1CEB1 /* PredinaRiskLocationMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRiskLocationMarkerView.swift; sourceTree = "<group>"; };
+		28C24C95210E69FA00E1CEB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		28C24C97210E6A0100E1CEB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		28C24C99210E6A0800E1CEB1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		28C24C9B210E6A2900E1CEB1 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		28C24C9D210E6A9200E1CEB1 /* PredinaRequestLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredinaRequestLocationService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28C24C4A2107D39700E1CEB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C24C9C210E6A2900E1CEB1 /* libz.1.1.3.tbd in Frameworks */,
+				28C24C9A210E6A0800E1CEB1 /* MobileCoreServices.framework in Frameworks */,
+				28C24C98210E6A0100E1CEB1 /* SystemConfiguration.framework in Frameworks */,
+				28C24C96210E69FA00E1CEB1 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C5E2107D39700E1CEB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C692107D39700E1CEB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28C24C442107D39700E1CEB1 = {
+			isa = PBXGroup;
+			children = (
+				28C24C4F2107D39700E1CEB1 /* Predina */,
+				28C24C642107D39700E1CEB1 /* PredinaTests */,
+				28C24C6F2107D39700E1CEB1 /* PredinaUITests */,
+				28C24C4E2107D39700E1CEB1 /* Products */,
+				28C24C94210E69FA00E1CEB1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		28C24C4E2107D39700E1CEB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C4D2107D39700E1CEB1 /* Predina.app */,
+				28C24C612107D39700E1CEB1 /* PredinaTests.xctest */,
+				28C24C6C2107D39700E1CEB1 /* PredinaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28C24C4F2107D39700E1CEB1 /* Predina */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C5C2107D39700E1CEB1 /* Info.plist */,
+				28C24C572107D39700E1CEB1 /* Assets.xcassets */,
+				28C24C852108FEA200E1CEB1 /* Maps */,
+				28C24C832108FE6700E1CEB1 /* Common */,
+				28C24C822108FE6000E1CEB1 /* AppDelegate */,
+			);
+			path = Predina;
+			sourceTree = "<group>";
+		};
+		28C24C642107D39700E1CEB1 /* PredinaTests */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C652107D39700E1CEB1 /* PredinaTests.swift */,
+				28C24C672107D39700E1CEB1 /* Info.plist */,
+			);
+			path = PredinaTests;
+			sourceTree = "<group>";
+		};
+		28C24C6F2107D39700E1CEB1 /* PredinaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C702107D39700E1CEB1 /* PredinaUITests.swift */,
+				28C24C722107D39700E1CEB1 /* Info.plist */,
+			);
+			path = PredinaUITests;
+			sourceTree = "<group>";
+		};
+		28C24C7E2108FE2800E1CEB1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C522107D39700E1CEB1 /* PredinaRiskMapViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		28C24C7F2108FE3500E1CEB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C86210910DA00E1CEB1 /* PredinaRiskLocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		28C24C802108FE3F00E1CEB1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C8C21091CC100E1CEB1 /* PredinaRiskLocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		28C24C812108FE5500E1CEB1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C9D210E6A9200E1CEB1 /* PredinaRequestLocationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		28C24C822108FE6000E1CEB1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C502107D39700E1CEB1 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		28C24C832108FE6700E1CEB1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C592107D39700E1CEB1 /* LaunchScreen.storyboard */,
+				28C24C542107D39700E1CEB1 /* Main.storyboard */,
+				28C24C8E21091E4E00E1CEB1 /* PredinaRiskMapUtil.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		28C24C842108FE9800E1CEB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C902109936A00E1CEB1 /* PredinaRiskLocationMarkerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		28C24C852108FEA200E1CEB1 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C842108FE9800E1CEB1 /* View */,
+				28C24C812108FE5500E1CEB1 /* Service */,
+				28C24C802108FE3F00E1CEB1 /* ViewModel */,
+				28C24C7F2108FE3500E1CEB1 /* Model */,
+				28C24C7E2108FE2800E1CEB1 /* ViewController */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		28C24C94210E69FA00E1CEB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28C24C9B210E6A2900E1CEB1 /* libz.1.1.3.tbd */,
+				28C24C99210E6A0800E1CEB1 /* MobileCoreServices.framework */,
+				28C24C97210E6A0100E1CEB1 /* SystemConfiguration.framework */,
+				28C24C95210E69FA00E1CEB1 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28C24C4C2107D39700E1CEB1 /* Predina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C24C752107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "Predina" */;
+			buildPhases = (
+				28C24C492107D39700E1CEB1 /* Sources */,
+				28C24C4A2107D39700E1CEB1 /* Frameworks */,
+				28C24C4B2107D39700E1CEB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Predina;
+			productName = Predina;
+			productReference = 28C24C4D2107D39700E1CEB1 /* Predina.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28C24C602107D39700E1CEB1 /* PredinaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C24C782107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "PredinaTests" */;
+			buildPhases = (
+				28C24C5D2107D39700E1CEB1 /* Sources */,
+				28C24C5E2107D39700E1CEB1 /* Frameworks */,
+				28C24C5F2107D39700E1CEB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28C24C632107D39700E1CEB1 /* PBXTargetDependency */,
+			);
+			name = PredinaTests;
+			productName = PredinaTests;
+			productReference = 28C24C612107D39700E1CEB1 /* PredinaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28C24C6B2107D39700E1CEB1 /* PredinaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C24C7B2107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "PredinaUITests" */;
+			buildPhases = (
+				28C24C682107D39700E1CEB1 /* Sources */,
+				28C24C692107D39700E1CEB1 /* Frameworks */,
+				28C24C6A2107D39700E1CEB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28C24C6E2107D39700E1CEB1 /* PBXTargetDependency */,
+			);
+			name = PredinaUITests;
+			productName = PredinaUITests;
+			productReference = 28C24C6C2107D39700E1CEB1 /* PredinaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28C24C452107D39700E1CEB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ashh;
+				TargetAttributes = {
+					28C24C4C2107D39700E1CEB1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					28C24C602107D39700E1CEB1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28C24C4C2107D39700E1CEB1;
+					};
+					28C24C6B2107D39700E1CEB1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28C24C4C2107D39700E1CEB1;
+					};
+				};
+			};
+			buildConfigurationList = 28C24C482107D39700E1CEB1 /* Build configuration list for PBXProject "Predina" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28C24C442107D39700E1CEB1;
+			productRefGroup = 28C24C4E2107D39700E1CEB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28C24C4C2107D39700E1CEB1 /* Predina */,
+				28C24C602107D39700E1CEB1 /* PredinaTests */,
+				28C24C6B2107D39700E1CEB1 /* PredinaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28C24C4B2107D39700E1CEB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C24C5B2107D39700E1CEB1 /* LaunchScreen.storyboard in Resources */,
+				28C24C582107D39700E1CEB1 /* Assets.xcassets in Resources */,
+				28C24C562107D39700E1CEB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C5F2107D39700E1CEB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C6A2107D39700E1CEB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28C24C492107D39700E1CEB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C24C532107D39700E1CEB1 /* PredinaRiskMapViewController.swift in Sources */,
+				28C24C8D21091CC100E1CEB1 /* PredinaRiskLocationViewModel.swift in Sources */,
+				28C24C912109936A00E1CEB1 /* PredinaRiskLocationMarkerView.swift in Sources */,
+				28C24C9E210E6A9200E1CEB1 /* PredinaRequestLocationService.swift in Sources */,
+				28C24C8F21091E4E00E1CEB1 /* PredinaRiskMapUtil.swift in Sources */,
+				28C24C87210910DA00E1CEB1 /* PredinaRiskLocationModel.swift in Sources */,
+				28C24C512107D39700E1CEB1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C5D2107D39700E1CEB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C24C662107D39700E1CEB1 /* PredinaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C24C682107D39700E1CEB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C24C712107D39700E1CEB1 /* PredinaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28C24C632107D39700E1CEB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28C24C4C2107D39700E1CEB1 /* Predina */;
+			targetProxy = 28C24C622107D39700E1CEB1 /* PBXContainerItemProxy */;
+		};
+		28C24C6E2107D39700E1CEB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28C24C4C2107D39700E1CEB1 /* Predina */;
+			targetProxy = 28C24C6D2107D39700E1CEB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28C24C542107D39700E1CEB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C24C552107D39700E1CEB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28C24C592107D39700E1CEB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C24C5A2107D39700E1CEB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28C24C732107D39700E1CEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28C24C742107D39700E1CEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28C24C762107D39700E1CEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = Predina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.Predina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28C24C772107D39700E1CEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = Predina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.Predina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28C24C792107D39700E1CEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = PredinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.PredinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Predina.app/Predina";
+			};
+			name = Debug;
+		};
+		28C24C7A2107D39700E1CEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = PredinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.PredinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Predina.app/Predina";
+			};
+			name = Release;
+		};
+		28C24C7C2107D39700E1CEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = PredinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.PredinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Predina;
+			};
+			name = Debug;
+		};
+		28C24C7D2107D39700E1CEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AL6YPQD729;
+				INFOPLIST_FILE = PredinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sampleApp.PredinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Predina;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28C24C482107D39700E1CEB1 /* Build configuration list for PBXProject "Predina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C24C732107D39700E1CEB1 /* Debug */,
+				28C24C742107D39700E1CEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C24C752107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "Predina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C24C762107D39700E1CEB1 /* Debug */,
+				28C24C772107D39700E1CEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C24C782107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "PredinaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C24C792107D39700E1CEB1 /* Debug */,
+				28C24C7A2107D39700E1CEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C24C7B2107D39700E1CEB1 /* Build configuration list for PBXNativeTarget "PredinaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C24C7C2107D39700E1CEB1 /* Debug */,
+				28C24C7D2107D39700E1CEB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28C24C452107D39700E1CEB1 /* Project object */;
+}
