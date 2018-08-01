@@ -32,7 +32,7 @@ class PredinaRequestLocationService: NSObject {
         {
             let jsonData = try JSONSerialization.data(withJSONObject: inputParams, options: .prettyPrinted)
             
-            let url = NSURL(string: "http://localhost/predina")!
+            let url = NSURL(string: "http://localhost/predinaService")!
             let request = NSMutableURLRequest(url: url as URL)
             request.httpMethod = "POST"
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
