@@ -42,6 +42,13 @@ The Map is plotted and updated with different colosr based on the random number 
  The test files are auto generated. However since the design pattern is MVVM you can create unit and automated test cases using XCTest and XCUITest respectively
  
  
+ Possible Improvements:
+ 
+ 1. Use socket streaming instead of http to continuosuly update the map
+ 2. Use file to store the locations, this is important to prevent high memory consumption
+ 3. Update the logic in the server to intelligently send only the required set of locations based on User current location
+ 
+ 
 
 
 
