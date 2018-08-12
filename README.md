@@ -37,6 +37,11 @@ The Map is plotted and updated with different colosr based on the random number 
  After the initial load App updates the data in periodic and gets the latest data continuously.
  
  
+ Test Project:
+ 
+ The test files are auto generated. However since the design pattern is MVVM you can create unit and automated test cases using XCTest and XCUITest respectively
+ 
+ 
 
 
 
