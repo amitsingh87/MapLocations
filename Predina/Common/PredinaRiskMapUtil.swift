@@ -24,7 +24,7 @@ class PredinaRiskMapUtil{
         switch color
         {
         case "9","10":
-            return UIColor(red: 139, green: 0, blue: 0, alpha: 1.0)
+            return UIColor(red: 139, green: 0, blue: 0, alpha: 1.0)//DarkRed
         case "8":
             return UIColor.red
         case "6","7":

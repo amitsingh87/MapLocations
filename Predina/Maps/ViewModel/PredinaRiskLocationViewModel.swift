@@ -10,6 +10,7 @@ import Foundation
 
 protocol RefreshLocationListener {
     func refreshMapWithLocations(mapLocations:[PredinaRiskLocationModel]?, totalLocations:Int32)
+    func locationsUpdated()
 }
 
 class PredinaRiskLocationViewModel {
@@ -24,9 +25,19 @@ class PredinaRiskLocationViewModel {
         service.delegate = self
         service.fetchLocations(pageSize: pageSize ?? kDefaultPageSize, currentPage: kDefaultCurrentPage)
     }
+    
+    func updateRiskLocations(){
+        let service = PredinaRequestLocationService()
+        service.delegate = self
+        service.updateLocations()
+    }
 }
 
 extension PredinaRiskLocationViewModel:ServiceLisener{
+    func didUpdateLocations() {
+        self.mapRefreshDelegate?.locationsUpdated()
+    }
+    
     func didFailWithError(error: Error?) {
         
     }

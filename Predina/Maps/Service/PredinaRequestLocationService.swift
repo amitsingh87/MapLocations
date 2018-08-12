@@ -10,6 +10,7 @@ import Foundation
 
 protocol ServiceLisener {
     func didRecieveResponse(response:[String:Any]) -> Void;
+    func didUpdateLocations() -> Void;
     func didFailWithError(error:Error?) -> Void;
 }
 class PredinaRequestLocationService: NSObject {
@@ -63,6 +64,34 @@ class PredinaRequestLocationService: NSObject {
         } catch {
             print(error)
         }
+        
+    }
+    
+    
+    func updateLocations() -> Void {
+        
+        let url = NSURL(string: "http://localhost/predinaUpdate")!
+        let request = NSMutableURLRequest(url: url as URL)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let task = URLSession.shared.dataTask(with: request as URLRequest){ (data, response, error)  in
+            
+            if error != nil{
+                print("Error -> \(String(describing: error))")
+                return
+            }
+            do {
+                if let _ = self.delegate{
+                    self.delegate?.didUpdateLocations()
+                }
+            } catch {
+                print("Error -> \(error)")
+                if let _ = self.delegate{
+                    self.delegate?.didFailWithError(error: error)
+                }
+            }
+        }
+        task.resume()
         
     }
     

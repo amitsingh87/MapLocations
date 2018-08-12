@@ -11,8 +11,8 @@ import MapKit
 
 class PredinaRiskLocationModel: NSObject,MKAnnotation {
     
-    var coordinate: CLLocationCoordinate2D
-    var riskLocationColor:String?
+    let coordinate: CLLocationCoordinate2D
+    let riskLocationColor:String?
     
     init(lat:String, lng:String, color:String?) {
         let latDouble = Double(lat)

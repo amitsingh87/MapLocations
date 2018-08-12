@@ -13,18 +13,37 @@ class PredinaRiskMapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    let regionRadius: CLLocationDistance = 200000
+    var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    
+    let regionRadius: CLLocationDistance = 300000
     var predinaRiskLocationViewModel = PredinaRiskLocationViewModel()
     var mapLocations:[PredinaRiskLocationModel] = [PredinaRiskLocationModel] ()
     
     var currentPageCount:Int = 0
     var locationsPlotted:Int32 = 0
     
+    let locationManager = CLLocationManager()
+    
+    let firstLoadPageSize = "0"
+    let updatePageSize = "100000"
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
         predinaRiskLocationViewModel.mapRefreshDelegate = self
+        
+        //checkLocationAuthorizationStatus()
+        
+        activityIndicator.frame = view.bounds
         
         pouplateMap()
     }
@@ -36,10 +55,14 @@ class PredinaRiskMapViewController: UIViewController {
     }
     
     func pouplateMap (){
-        let centreLocation = CLLocation(latitude: 52.897724, longitude: -1.313197)
+        let centreLocation = CLLocation(latitude: 55.986615, longitude: -3.800686)
         centerMapOnLocation(location: centreLocation)
         
-        predinaRiskLocationViewModel.getRiskLocations(pageSize: "100000", currentPage: "1")
+        // Show loading indicator to User
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
+        predinaRiskLocationViewModel.getRiskLocations(pageSize: firstLoadPageSize, currentPage: "1")
     }
 }
 
@@ -64,25 +87,50 @@ extension PredinaRiskMapViewController: MKMapViewDelegate {
         return view
         
     }
+    
 }
 
 extension PredinaRiskMapViewController:RefreshLocationListener{
     
     func refreshMapWithLocations(mapLocations: [PredinaRiskLocationModel]?, totalLocations: Int32) {
         
-        if let locations = mapLocations{
-            mapView.addAnnotations(locations)
-            locationsPlotted = Int32(locations.count)
+        DispatchQueue.main.async {
+            //Stop the indicator
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.removeFromSuperview()
+            
+            if let locations = mapLocations{
+                if self.mapView.annotations.count > 0{
+                    self.mapView.removeAnnotations(self.mapView.annotations)
+                }
+                
+                self.mapView.addAnnotations(locations)
+                self.locationsPlotted = Int32(locations.count)
+            }
         }
+
+        let delayTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+            self.predinaRiskLocationViewModel.updateRiskLocations()
+        }
+        /*
         
-        if locationsPlotted < totalLocations {
-            // Keep invoking the api unless we have all the locations plotted
-            self.predinaRiskLocationViewModel.getRiskLocations(pageSize: "100000", currentPage: String(currentPageCount+1))
-        } else {
-            // After getting all the data start the pagination again to get the updated data set
-            currentPageCount = 0
-            predinaRiskLocationViewModel.getRiskLocations(pageSize: "100000", currentPage: "1")
-        }
+        let delayTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+            if self.locationsPlotted < totalLocations {
+                // Keep invoking the api unless we have all the locations plotted
+                self.predinaRiskLocationViewModel.getRiskLocations(pageSize: "1000", currentPage: String(self.currentPageCount+1))
+            } else {
+                // After getting all the data start the pagination again to get the updated data set
+                self.currentPageCount = 0
+                self.predinaRiskLocationViewModel.getRiskLocations(pageSize: "1000", currentPage: "1")
+            }
+        }*/
+        
+    }
+    
+    func locationsUpdated() {
+        self.predinaRiskLocationViewModel.getRiskLocations(pageSize: updatePageSize, currentPage: "1")
     }
 }
 

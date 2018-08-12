@@ -22,13 +22,18 @@ class RiskLocationAPI {
     }
 
     function fetchLocations() {
-        $pageSize = isset($_POST["pageSize"]) ? $_POST["pageSize"]:100000 ;
+        $pageSize = isset($_POST["pageSize"]) ? $_POST["pageSize"]:1000 ;
         $currentPage = isset($_POST["currentPage"]) ? $_POST["currentPage"]:1 ;
 		$offset = ($currentPage -1) * $pageSize;
 		$sql = "select * from risklocatons";
 		$count_set = $this->mysqli->query($sql) or die($this->mysqli->error . __LINE__);
 		
 		$query = "select latitude,longitude,riskcolor from risklocatons LIMIT $offset,$pageSize";
+		
+		if ($pageSize == 0){
+			$query = "select latitude,longitude,riskcolor from risklocatons";
+		}
+		
 		$result = $this->mysqli->query($query) or die($this->mysqli->error . __LINE__);
 		
 		$arr = array();
@@ -43,27 +48,7 @@ class RiskLocationAPI {
     	sendResponse(200, json_encode($locations));
         return true;
 	}
-	
-	function updateLocationColor() {
-	
-            $conn = $con=mysqli_connect("localhost","root","passpass","predina");
-            
-            if(! $conn ) {
-               die("Failed to connect to MySQL: " . mysqli_connect_error()); 
-            }
 
-            $sql = "UPDATE risklocatons SET riskcolor = FLOOR( 1 + RAND( ) *10 );";
-            
-            $retval  = mysqli_query($conn, $sql);
-            
-            if(! $retval ) {
-               die('Could not update data: ' . mysqli_error($con));
-            }
-            echo "Updated data successfully\n";
-            mysqli_close($conn);
-
-        return true;
-	}
 }
 
 
